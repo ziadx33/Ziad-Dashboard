@@ -1,3 +1,15 @@
+/* Start Variables */
+:root {
+     --blue-color: #0075ff;
+     --blue-alt-color: #0d69d5;
+     --orange-color: #f59e0b;
+     --green-color: #22c55e;
+     --red-color: #f44336;
+     --grey-color: #888;
+}
+
+/* End Variables */
+
 /* Start Box */
 .d-flex {
      display: flex;
@@ -15,8 +27,24 @@
      border-radius: 6px;
 }
 
+.rad-10 {
+     border-radius: 10px;
+}
+
+.br-ccc {
+     border: 1px solid #CCC;
+}
+
 .w-full {
      width: 100%;
+}
+
+.ov-h {
+     overflow: hidden;
+}
+
+.box-shad {
+     box-shadow: 0 0 10px #ddd;
 }
 
 /* End Box */
@@ -27,6 +55,10 @@
 
 .p-20 {
      padding: 20px;
+}
+
+.p-15 {
+     padding: 15px;
 }
 
 .mt-0 {
@@ -51,6 +83,10 @@
 
 .c-black {
      color: black;
+}
+
+.bg-fbfbfb {
+     background-color: #FBFBFB;
 }
 
 /* End Color */
@@ -78,3 +114,18 @@
 }
 
 /* End Mobile  */
+
+/* Start Components */
+.between-flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.around-flex {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+/* End Components */
