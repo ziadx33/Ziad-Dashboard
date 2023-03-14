@@ -1153,6 +1153,49 @@ h1::after {
 
 /* * Start Friends */
 
+.friends-page {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 767px) {
+	.friends-page {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		margin-left: 10px;
+		margin-right: 10px;
+		gap: 10px;
+	}
+}
+.friends-page .contact {
+	left: 10px;
+	top: 10px;
+}
+.friends-page .contact i {
+	color: #666;
+}
+.friends-page .contact i:hover {
+	animation: rotation 0.3s alternate infinite;
+	animation-timing-function: cubic-bezier(0.42, 0, 0.21, 0.98);
+	background-color: var(--blue-color);
+	color: white;
+}
+
+.friends-page .friend .icons {
+	border-top: 1px solid #eee;
+}
+
+.friends-page .friend .icons i {
+	margin-right: 5px;
+}
+
+.friends-page .friend .icons .vip {
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+	opacity: 0.2;
+	text-transform: uppercase;
+}
+
 /* * End Friends */
 
 /* * Start Animation */
@@ -1183,5 +1226,17 @@ h1::after {
 }
 
 /* End Backup Server */
+
+/* Start Friend contact icon */
+@keyframes rotation {
+	from {
+		transform: translateY(-5px);
+	}
+	to {
+		transform: translateY(5px);
+		transform: rotate(30deg);
+	}
+}
+/* End Friend contact icon */
 
 /* * End Animation */
