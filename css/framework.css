@@ -325,6 +325,10 @@
 	background-color: #eee;
 }
 
+.hov-alt-col:hover {
+	background-color: var(--blue-alt-color);
+}
+
 /* End Color */
 /* Start Position */
 .p-rel {
@@ -378,7 +382,7 @@
 /* Start Components */
 
 .center-flex {
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	justify-content: center;
 }
