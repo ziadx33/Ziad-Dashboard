@@ -31,6 +31,18 @@
 	display: grid;
 }
 
+.grid-sys-450 {
+	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.grid-sys-500 {
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.grid-sys-300 {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
 .d-block {
 	display: block;
 }
@@ -44,6 +56,12 @@
 	justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+	.gap-10-mob {
+		gap: 10px;
+	}
+}
+
 .gap-20 {
 	gap: 20px;
 }
@@ -54,10 +72,6 @@
 
 .box-shad {
 	box-shadow: 0 0 10px #ddd;
-}
-
-.z-1 {
-	z-index: 1;
 }
 
 /* End Box */
@@ -76,12 +90,36 @@
 	width: 40px;
 }
 
+.w-64 {
+	width: 64px;
+}
+
+.h-64 {
+	height: 64px;
+}
+
+.w-80 {
+	width: 80px;
+}
+
 .w-100 {
 	width: 100px;
 }
 
+.w-190 {
+	width: 190px;
+}
+
+.w-240 {
+	width: 240px;
+}
+
 .h-40 {
 	height: 40px;
+}
+
+.h-80 {
+	height: 80px;
 }
 
 .h-full {
@@ -98,7 +136,7 @@
 
 /* End Width & Height */
 
-/* Start Border */
+/* Start Border & outline */
 
 .rad-6 {
 	border-radius: 6px;
@@ -116,6 +154,10 @@
 	border: 1px solid #ccc;
 }
 
+.br-white {
+	border: 1px solid white;
+}
+
 .br-eee {
 	border: 1px solid #eee;
 }
@@ -124,8 +166,26 @@
 	border-bottom: 1px solid #eee;
 }
 
+.br-ddd {
+	border: 1px solid #ddd;
+}
+
+.brt-eee {
+	border-top: 1px solid #eee;
+}
+
 .b-none {
 	border: none;
+}
+
+.out-col-blue {
+	outline: 3px solid var(--blue-color);
+}
+.out-col-green {
+	outline: 3px solid var(--green-color);
+}
+.out-col-orange {
+	outline: 3px solid var(--orange-color);
 }
 
 /* End Border */
@@ -172,6 +232,14 @@
 	padding-left: 15px;
 }
 
+.pl-30 {
+	padding-left: 30px;
+}
+
+.m-auto {
+	margin: auto;
+}
+
 .m-0 {
 	margin: 0;
 }
@@ -208,6 +276,14 @@
 	margin-top: 25px;
 }
 
+.mt-50 {
+	margin-top: 50px;
+}
+
+.mr-5 {
+	margin-right: 5px;
+}
+
 .mr-10 {
 	margin-right: 10px;
 }
@@ -242,6 +318,18 @@
 
 .mb-25 {
 	margin-bottom: 25px;
+}
+
+.mb-50 {
+	margin-bottom: 50px;
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.ml-5 {
+	margin-left: 5px;
 }
 
 .ml-20 {
@@ -324,6 +412,10 @@
 .bg-eee {
 	background-color: #eee;
 }
+.sidebar-color,
+.sidebar-hov-color:hover {
+	background-color: #f6f6f6;
+}
 
 .hov-alt-col:hover {
 	background-color: var(--blue-alt-color);
@@ -356,12 +448,54 @@
 		text-align: center;
 	}
 
-	.block-mob {
-		display: block;
+	.d-block-mob {
+		display: block !important;
 	}
 
 	.d-flex-mob {
 		display: flex;
+	}
+	.w-full-mob {
+		width: 100%;
+	}
+	.flex-dir-col-mob {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	.flex-dir-row-mob {
+		display: flex !important;
+		flex-direction: row;
+	}
+	.grid-sys-450-mob {
+		grid-template-columns: minmax(200px, 1fr);
+		margin: 0 10px 0 10px;
+	}
+	.grid-sys-500-mob {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+	.grid-sys-300-mob {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+	.fs-13-mob {
+		font-size: 13px;
+	}
+	.mb-15-mob {
+		margin-bottom: 15px;
+	}
+	.d-none-before::before {
+		display: none;
+	}
+	.d-none-after::after {
+		display: none;
+	}
+	.d-none-mob {
+		display: none;
+	}
+	.w-58-mob {
+		width: 58px;
+	}
+	.p-10-mob {
+		padding: 10px;
 	}
 }
 
@@ -418,6 +552,51 @@
 .widget-trans:hover {
 	box-shadow: 0 0 10px #ddd;
 	transform: scale(1.01);
+}
+
+.page-margin {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.toggle-checkbox {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.toggle-switch {
+	background-color: #ccc;
+	width: 78px;
+	height: 32px;
+	border-radius: 16px;
+}
+
+.toggle-switch::before {
+	font-family: 'Font Awesome 6 Free';
+	content: '\f00d';
+	position: absolute;
+	background-color: white;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	top: 4px;
+	left: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #aaa;
+	transition: var(--main-trans);
+	font-weight: 900;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+	background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+	content: '\f00c' !important;
+	left: 50px;
+	color: var(--blue-color);
 }
 
 /* End Components */
